@@ -2,7 +2,7 @@
 .idea/**/*
 *.iml
 components/**/*
-**/fonts/**/*
+**/fonts/frutiger/**/*
 src/lib/**/*
 node_modules/**/*
 
