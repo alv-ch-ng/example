@@ -104,6 +104,40 @@
   });
 
   app.controller('ExampleCtrl', function ($scope) {
+      $scope.testSelect=[];
+      $scope.testMultSelect=[];
+      $scope.selected=[];
+      $scope.cities = [
+          { 'value': 1 , 'text': 'Amsterdam'   , 'continent': 'Europe'    },
+          { 'value': 2 , 'text': 'Bern'   , 'continent': 'Europe'    },
+          { 'value': 3 , 'text': 'Zürich'   , 'continent': 'Europe'    },
+          { 'value': 5 , 'text': 'Belfast'   , 'continent': 'Europe'    },
+          { 'value': 6 , 'text': 'Berlin'   , 'continent': 'Europe'    },
+          { 'value': 4 , 'text': 'Washington'  , 'continent': 'America'   },
+          { 'value': 8 , 'text': 'New York'  , 'continent': 'America'   },
+          { 'value': 9 , 'text': 'New Bern'  , 'continent': 'America'   },
+          { 'value': 11 , 'text': 'Los Angeles'  , 'continent': 'America'   },
+          { 'value': 7 , 'text': 'Sydney'      , 'continent': 'Australia' },
+          { 'value': 12 , 'text': 'Melbourne'      , 'continent': 'Australia' },
+          { 'value': 10, 'text': 'Beijing'     , 'continent': 'Asia'      },
+          { 'value': 13, 'text': 'Cairo'       , 'continent': 'Africa'    }
+      ];
+      $scope.berufsgruppen = [
+          { 'value': 1,	'text':'Administration/Verwaltung/Management' },
+          { 'value': 2,	'text':'Finanzwesen/Versicherungen/Recht' },
+          { 'value': 3,	'text':'Marketing/Tourismus/Medien' },
+          { 'value': 4,	'text':'Informatik/Ingenieure' },
+          { 'value': 5,	'text':'Industriehandwerk/Technik/Grafik' },
+          { 'value': 6,	'text':'Bauhandwerk' },
+          { 'value': 7,	'text':'Logistik/Transport' },
+          { 'value': 8,	'text':'Landwirtschaft/Gartenbau' },
+          { 'value': 9,	'text':'Verkauf/Aussendienst' },
+          { 'value': 10,	'text':'Gastronomie/Lebensmittel' },
+          { 'value': 11,	'text':'Reinigung/Unterhalt' },
+          { 'value': 12,	'text':'Soziales/Pädagogik/Geisteswissenschaft' },
+          { 'value': 13,	'text':'Gesundheitswesen/Naturwissenschaft' },
+          { 'value': 14,	'text':'Kunst/Dienstleistung/Sonstige Berufe' }
+      ];
 
       $scope.longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper augue vel scelerisque egestas. Praesent odio lacus, porta vitae nisl a, semper tempor elit. Etiam fringilla ut nisl non dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis eros euismod, elementum tortor ut, sagittis felis. Nulla lectus ante, eleifend non felis pharetra, porta aliquet urna. Curabitur nec elit sit amet tortor accumsan volutpat sed vitae ante. Cras semper consequat nunc, in tincidunt dolor scelerisque eget. Morbi volutpat quis est bibendum aliquet. Sed euismod neque nisl, congue fermentum eros sagittis sit amet. Nulla at tincidunt nibh.";
 

@@ -119,7 +119,7 @@
                             'lib/angular-translate-storage-local/angular-translate-storage-local.js',
                             'lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
                             'lib/ng-lodash/build/ng-lodash.js',
-                            'lib/bootstrap-select/dist/js/bootstrap-select.min.js',
+                            'lib/bootstrap-datepicker/js/bootstrap-datepicker.js',
                             'lib/mailcheck/src/mailcheck.min.js',
                             'lib/angular-ui-bootstrap/src/typeahead/typeahead.js',
                             'lib/angular-ui-bootstrap/src/tooltip/tooltip.js',
