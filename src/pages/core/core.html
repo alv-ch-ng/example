@@ -1,7 +1,184 @@
-<h1>alv-ch-ng.core - Example App</h1>
-<p>
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-</p>
-<p>
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-</p>
+<div class="page-header">
+    <h1>Core
+        <small>Reusable components built to ease the hassle of not knowing the right stylesheets.</small>
+    </h1>
+</div>
+
+<div scroll-spy>
+    <div class="sidebar collapse navbar-collapse">
+        <div id="toc-container" scroll-fix="alv-divider" scroll-fix-bottom="footer-container" role="navigation">
+            <toc id="toc" selector=".toc"></toc>
+        </div>
+    </div>
+    <div class="content">
+
+        <h2 class="toc">Alerts</h2>
+        <div highlight="this">
+<alert alert-severity="info" alert-dismissable="true">
+    <span>
+        <strong>Anzahl gefundene Jobs: 39.267</strong> Die Anzahl der Resultate ist auf 300 beschränkt. Bitte wählen Sie zusätzliche Suchkriterien, um die Anzahl der Resultate einzuschränken.
+    </span>
+</alert>
+<alert alert-severity="danger" alert-dismissable="true" alert-dismissable-text="Please click">
+    <span><strong>alv-ch-ng</strong> - Please dismiss this alert.</span>
+</alert>
+        </div>
+
+        <h3>System Alerts</h3>
+        <div highlight="this">
+<div class="system-messages">
+    <alert alert-severity="info" alert-dismissable="true">
+        <span><strong>alv-ch-ng</strong> welcomes you.</span>
+    </alert>
+    <alert alert-severity="danger" alert-dismissable="true" alert-dismissable-text="Please click">
+        <span><strong>alv-ch-ng</strong> - Please dismiss this alert.</span>
+    </alert>
+</div>
+        </div>
+
+        <h2 class="toc">Default Buttons</h2>
+        <div highlight="this">
+<button primary="true">
+    Primary Button
+</button>
+
+<button>
+    Default Button
+</button>
+        </div>
+
+        <h2 class="toc">Badges</h2>
+        <div highlight="this">
+<a href="#">Inbox
+    <badge>42</badge>
+</a>
+
+<p/>
+
+<a href="#" badge="21">Outbox</a>
+
+<p/>
+
+<ul class="nav nav-pills nav-stacked">
+    <li class="active">
+        <a href="#">
+            <badge badge-align="right">42</badge>
+            Home
+        </a>
+    </li>
+    <li>
+        <a href="#" badge-align="right" badge="42">
+            Start
+        </a>
+    </li>
+</ul>
+        </div>
+
+        <h2 class="toc">Markers</h2>
+        <div highlight="this">
+<h3>Example heading
+    <marker>New</marker>
+</h3>
+<h3 marker="old">Example heading</h3>
+
+<marker>Default</marker>
+<marker marker-severity="primary">Primary</marker>
+<marker marker-severity="success">Success</marker>
+<marker marker-severity="info">Info</marker>
+<marker marker-severity="warning">Warning</marker>
+<marker marker-severity="danger">Danger</marker>
+        </div>
+
+        <h2 class="toc">Glyphicons</h2>
+
+        <h3>Basic Directive</h3>
+        You can use the Standard <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">Bootstrap Glyphicons</a> as follows.
+        <div highlight="this">
+            <button>
+                <glyph icon="star"/>
+                Star
+            </button>
+
+            <button glyph-icon="search" glyph-align="right">
+                Search
+            </button>
+        </div>
+
+        <h3>Admin Symbols</h3>
+        There are also the <a href="http://swiss.github.io/styleguide/base_layout_-_general.html#e-icons" target="_blank">Admin Icons</a> as CSS classes included.
+        <div highlight="this">
+<span glyph-icon="calendar" admin-symbol>
+    Calendar
+</span>
+
+<button glyph-icon="print" admin-symbol glyph-align="right">
+    Print
+</button>
+        </div>
+        <div class="bs-glyphicons">
+            <ul class="bs-glyphicons-list">
+                <li ng-repeat="adminIcon in adminIcons">
+                    <span class="adminIcons icon icon--{{adminIcon}}" aria-hidden="true"></span>
+                    <span class="glyphicon-class">.icon .icon--{{adminIcon}}</span>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="toc">Collapsible</h2>
+        <p class="info-notice">under construction</p>
+
+
+        <h2 class="toc">Release Note</h2>
+        <p class="info-notice">under construction</p>
+
+
+        <h2 class="toc">Sidebar</h2>
+        Sidebars can be placed on the right or the left (see example on this site on the left side). After or before a Sidebar, there has to be a <code>.content</code> Layer.
+        <div highlight="this" class="ex_alv">
+<div class="sidebar collapse navbar-collapse">
+    <span>This is your Sidebar</span>
+</div>
+        </div>
+        <p style="clear: both;"></p>
+
+        <h3>Sidebar-Toggle</h3>
+        <div highlight="this" class="ex_alv">
+<div class="navbar-header">
+    <sidebar-toggle></sidebar-toggle>
+</div>
+        </div>
+
+        <h2 class="toc">Table of Content</h2>
+        <div class="highlight">
+        <pre>
+<code class="hljs">
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"table-of-content"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"navigation"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">toc</span> <span class="hljs-attribute">selector</span>=<span class="hljs-value">".toc"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">toc</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code>
+        </pre>
+        </div>
+
+
+        <h2 class="toc">Language Switcher</h2>
+        <div highlight="this">
+<div class="collapse navbar-collapse" id="global-navigation">
+    <div class="nav navbar-nav">
+        <language-switcher></language-switcher>
+    </div>
+</div>
+        </div>
+        <p style="clear: both;"></p>
+
+        <h2 class="toc">Navbar Components</h2>
+        <p class="info-notice">under construction</p>
+
+
+        <h2 class="toc">UI Config Service</h2>
+        <p class="info-notice">under construction</p>
+
+
+        <h2 class="toc">UI Render Service</h2>
+        <p class="info-notice">under construction</p>
+    </div>
+</div>

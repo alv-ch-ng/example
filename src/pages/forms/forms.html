@@ -1,7 +1,209 @@
-<h1>alv-ch-ng.forms - Example App</h1>
-<p>
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-</p>
-<p>
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-</p>
+<div class="page-header">
+    <h1>Forms
+        <small>Basic form directives for the needs of common E-Governement applications.</small>
+    </h1>
+</div>
+
+<div scroll-spy>
+    <div class="sidebar collapse navbar-collapse">
+        <div id="toc-container" scroll-fix="alv-divider" scroll-fix-bottom="footer-container" role="navigation">
+            <toc id="toc" selector=".toc"></toc>
+        </div>
+    </div>
+    <div class="content">
+
+        <h2 class="toc">Basic example</h2>
+        <p>
+            Individual form controls automatically receive some global styling by adding <code>form-input</code> attribute. All textual <code>input</code>,<code>textarea</code> and <code>select</code> elements are set to <code>width: 100%;</code> by default.
+        </p>
+        <p>
+            Labels are added by the attribute <code>form-label</code> with the representing <strong>i18n-message-key</strong>. The alignment of the label is by default above the input field. By adding <code>.form-inline</code> or <code>.form-horizontal</code> to the <code>form</code> element, the position of the element is set automatically to the desired alignment.
+        </p>
+
+        <h3>Example</h3>
+        <div highlight="this">
+<form role="form">
+    <input type="text" form-input form-label="testLabel" name="testInput" id="testInput" ng-model="form.testInput" />
+
+    <textarea form-textarea form-label="testLabel" name="testTextarea" id="testTextarea" ng-model="form.testTextarea"></textarea>
+
+    <select form-input form-label="testLabel" name="testSelect" id="testSelect" ng-model="form.testSelect" ng-options="country.text for country in countries"></select>
+
+    <input type="checkbox" form-label="testLabel" name="testCheckbox" id="testCheckbox" ng-model="form.testCheckbox"/>
+
+    <input type="radio" form-label="testLabel" name="testRadio" id="testRadio_1" ng-model="form.testRadio"/>
+
+    <input type="radio" form-label="testLabel" name="testRadio" id="testRadio_2" ng-model="form.testRadio"/>
+</form>
+        </div>
+
+        <h3>Inline forms</h3>
+        <div highlight="this">
+<form role="form" class="form-inline">
+    <input type="text" form-input form-label="testLabel" name="testInput" id="inline-testInput" ng-model="form.testInput" />
+
+    <textarea form-textarea form-label="testLabel" name="testTextarea" id="inline-testTextarea" ng-model="form.testTextarea"></textarea>
+
+    <select form-input form-label="testLabel" name="testSelect" id="inline-testSelect" ng-model="form.testSelect" ng-options="country.text for country in countries"></select>
+
+    <input type="checkbox" form-label="testLabel" name="testCheckbox" id="inline-testCheckbox" ng-model="form.testCheckbox"/>
+
+    <input type="radio" form-label="testLabel" name="testRadio" id="inline-testRadio_1" ng-model="form.testRadio"/>
+
+    <input type="radio" form-label="testLabel" name="testRadio" id="inline-testRadio_2" ng-model="form.testRadio"/>
+</form>
+        </div>
+
+        <h3>Horizontal forms</h3>
+        <div highlight="this">
+<form role="form" class="form-horizontal">
+    <input type="text" form-input form-label="testLabel" name="testInput" id="horizontal-testInput" ng-model="form.testInput" />
+
+    <textarea form-textarea form-label="testLabel" name="testTextarea" id="horizontal-testTextarea" ng-model="form.testTextarea"></textarea>
+
+    <select form-input form-label="testLabel" name="testSelect" id="horizontal-testSelect" ng-model="form.testSelect" ng-options="country.text for country in countries"></select>
+
+    <input type="checkbox" form-label="testLabel" name="testCheckbox" id="horizontal-testCheckbox" ng-model="form.testCheckbox"/>
+
+    <input type="radio" form-label="testLabel" name="testRadio" id="horizontal-testRadio_1" ng-model="form.testRadio"/>
+
+    <input type="radio" form-label="testLabel" name="testRadio" id="horizontal-testRadio_2" ng-model="form.testRadio"/>
+</form>
+        </div>
+
+        <h2 class="toc">Password</h2>
+        <p>
+            Add <code>form-password</code> attribute to a password input element to have the possibility to see the password in plain text.
+        </p>
+        <div highlight="this">
+<input type="password" form-input form-password form-label="testLabel" name="testPassword" id="testPassword" ng-model="form.testPassword" />
+        </div>
+
+        <h2 class="toc">Datepicker</h2>
+        <div highlight="this">
+<input form-datepicker
+       id="testDatepicker"
+       name="testDatepicker"
+       type="text"
+       form-label="testLabel"
+       form-input
+       ng-model="form.testDatepicker" />
+        </div>
+
+        <h2 class="toc">Mailcheck</h2>
+        <div highlight="this">
+<input form-mailcheck
+       id="testMailcheck"
+       name="testMailcheck"
+       type="text"
+       form-label="testLabel"
+       form-input
+       ng-model="form.testMailcheck" />
+        </div>
+
+        <h2 class="toc">Placeholder Label</h2>
+        <p class="danger-notice">work in progress</p>
+        <div highlight="this">
+
+<input type="text" form-input form-placeholder-label="testLabel" form-placeholder-label-type="label" id="test1"
+       ng-model="searchCriteria.placeholder1"/>
+
+<input type="text" form-input form-placeholder-label="testLabel" form-placeholder-label-type="inside" id="test2"
+       ng-model="searchCriteria.placeholder2"/>
+
+<input type="text" form-input form-placeholder-label="testLabel" form-placeholder-label-type="outline" id="test3"
+       ng-model="searchCriteria.placeholder3"/>
+
+        </div>
+
+        <h2 class="toc">Help text</h2>
+        <div highlight="this">
+<form role="form">
+    <input type="text" form-input form-helptext="testHelptext" form-label="testLabel" name="testHelptext" id="testHelptext" ng-model="form.testHelptext" />
+</form>
+        </div>
+
+        <h2 class="toc">Input Addons</h2>
+        <div highlight="this">
+<input type="text" form-input form-label="testLabel" form-prepend="test-currency" id="test102" ng-model="searchCriteria.placeholder100" />
+
+<input type="text" form-input form-label="testLabel" form-append="test-double0" id="test101" ng-model="searchCriteria.placeholder100"  />
+
+<input type="text" form-input form-label="testLabel" form-prepend="test-currency" form-append="test-double0" id="test100" ng-model="searchCriteria.placeholder100" />
+
+<input type="text" form-input form-label="testLabel" form-prepend="euro" form-prepend-icon="true" id="test103" ng-model="searchCriteria.placeholder100" />
+
+<input type="text" form-input form-label="testLabel" form-append="euro" form-append-icon="true" id="test104" ng-model="searchCriteria.placeholder100"  />
+
+<hr />
+
+<input type="text" form-input form-label="testLabel" form-append="test-btn" form-append-btn="doSomething()" id="test105" ng-model="searchCriteria.placeholder100"  />
+
+<input type="text" form-input form-label="testLabel" form-prepend="test-btn2" form-prepend-btn="doSomething()" id="test106" ng-model="searchCriteria.placeholder100"  />
+
+<input type="text" form-input form-label="testLabel" form-prepend="test-btn3" form-prepend-btn="doSomething()" form-append="test-btn4" form-append-btn="doSomething()" id="test107" ng-model="searchCriteria.placeholder100"  />
+
+<hr />
+
+<input form-input form-append="map-marker" form-append-icon="true" form-append-btn="doLocation()" form-append-btn-submit="true" type="email" id="location" ng-model="location" /><br />
+        </div>
+
+        <h2 class="toc">Input Inset</h2>
+        <div highlight="this">
+<input form-input form-inset="map-marker" type="email" id="location3" ng-model="location" /><br />
+<input form-input form-inset="map-marker" form-inset-action="doLocation()" type="email" id="location5" ng-model="location" /><br />
+<input form-input form-inset="map-marker" form-inset-action="doLocation()" form-inset-btn type="email" id="location7" ng-model="location" /><br />
+<input form-input form-inset="map-marker" form-inset-action="doLocation()" form-inset-btn="submit" type="email" id="location9" ng-model="location" /><br />
+        </div>
+
+        <h2 class="toc" id="autocompleter">Autocompleter / Input Tag / Input Dropdown</h2>
+        <p class="danger-notice">work in progress</p>
+        <div highlight="this" highlight-model="tags">
+
+<input type="text"
+       form-input
+       form-label="testLabel"
+       typeahead="city as city.text for city in cities | filter:{text:$viewValue}"
+       typeahead-append-to-body="true"
+       i18n-attribute="placeholder"
+       i18n-value="testAutoCompletePlaceholder"
+       ng-model="selected" />
+
+<input type="text"
+       form-tag="testLabel"
+       form-target-model="tags"
+       form-label="testLabel"
+       typeahead="city as city.text for city in cities | filter:{text:$viewValue}"
+       typeahead-on-select="addToTargetModel($item)"
+       typeahead-append-to-body="true"
+       i18n-attribute="placeholder"
+       i18n-value="testAutoCompletePlaceholder"
+       ng-model="selected" />
+
+<div type="text"
+     form-tag="testLabel"
+     form-target-model="tags"
+     form-label="testLabel"
+     form-append-dropdown="berufsgruppen"
+     form-append-dropdown-title="Berufsgruppen"
+     i18n-attribute="placeholder"
+     i18n-value="testAutoCompletePlaceholder"
+     ng-model="selected"></div>
+
+<input type="text"
+       form-tag="testLabel"
+       form-target-model="tags"
+       form-label="testLabel"
+       form-helptext="testHelptext"
+       form-append-dropdown="berufsgruppen"
+       form-append-dropdown-title="Berufsgruppen"
+       typeahead="city as city.text for city in cities | filter:{text:$viewValue}"
+       typeahead-on-select="addToTargetModel($item)"
+       typeahead-append-to-body="true"
+       i18n-attribute="placeholder"
+       i18n-value="testAutoCompletePlaceholder"
+       ng-model="selected" />
+
+        </div>
+    </div>
+</div>
