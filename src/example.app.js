@@ -105,7 +105,7 @@
 
   app.controller('ExampleCtrl', function ($scope) {
       $scope.testSelect=[];
-      $scope.testMultSelect=[];
+      $scope.testMultipleSelect=[];
       $scope.selected=[];
       $scope.cities = [
           { 'value': 1 , 'text': 'Amsterdam'   , 'continent': 'Europe'    },
