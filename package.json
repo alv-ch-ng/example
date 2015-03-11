@@ -1,0 +1,45 @@
+{
+  "name": "alv-ch-ng.example",
+  "version": "0.2.0",
+  "description": "Demo Site alv-ch-ng.",
+  "author": "ALV-CH",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alv-ch-ng/example"
+  },
+  "engines": {
+    "node": ">= 0.10.0",
+    "npm": ">= 1.0.0"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose",
+    "start": "node server.js",
+    "postinstall": "export HOME=$HOME/app-root/runtime/repo"
+  },
+  "main":"server.js",
+  "dependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-compress": "*",
+    "grunt-concat-css": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssbeautifier":"*",
+    "grunt-browser-sync": "*",
+    "grunt-exec": "*",
+    "bower": "*",
+    "express": "^4.9.0"
+  },
+  "devDependencies": {
+    "load-grunt-tasks": "*",
+    "time-grunt": "*",
+    "colors": "*",
+    "phantomjs": "*",
+    "travis": "*",
+    "browser-sync": "^1.8.3"
+  }
+}

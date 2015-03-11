@@ -1,0 +1,8 @@
+.grunt/**/*
+.idea/**/*
+*.iml
+components/**/*
+**/fonts/**/*
+src/lib/**/*
+node_modules/**/*
+
