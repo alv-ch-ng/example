@@ -5,10 +5,10 @@
     },
     "footer": {
       "copyright":"",
-      "seco":"Staatssekretariat für Wirtschaft SECO",
-      "alv":"Arbeitsmarkt / Arbeitslosenversicherung",
-      "tcit":"Ressort Informatik",
-      "itas3":"Applikations-Services eGov"
+      "seco":"Segreteria di Stato dell’economia SECO",
+      "alv":"Mercato del lavoro / Assicurazione contro la disoccupazione",
+      "tcit":"Informatica",
+      "itas3":"Servizi applicativi eGov"
     }
   },
   "testLabel": "Test Label zum testen des Tests",

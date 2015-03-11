@@ -6,3 +6,5 @@ components/**/*
 src/lib/**/*
 node_modules/**/*
 
+
+private

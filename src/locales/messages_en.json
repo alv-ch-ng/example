@@ -5,10 +5,10 @@
     },
     "footer": {
       "copyright":"",
-      "seco":"Staatssekretariat für Wirtschaft SECO",
-      "alv":"Arbeitsmarkt / Arbeitslosenversicherung",
-      "tcit":"Ressort Informatik",
-      "itas3":"Applikations-Services eGov"
+      "seco":"State Secretariat of Economic Affairs SECO",
+      "alv":"Labour Market / Unemployment Insurance Division",
+      "tcit":"Information Technology",
+      "itas3":"Applications Services eGov"
     }
   },
   "testLabel": "Test Label for testing purpose",
