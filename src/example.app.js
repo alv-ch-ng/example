@@ -99,11 +99,40 @@
     });
 
     $translateProvider.determinePreferredLanguage();
-
-    $translateProvider.useLocalStorage();
   });
 
-  app.controller('ExampleCtrl', function ($scope) {
+  app.controller('ExampleCtrl', function ($scope, AlertsService) {
+
+      $scope.timeoutError=true;
+      var alertI=0;
+      var alert=[];
+      alert[0]={message:{severity:'danger',overlay:'false', dismissable:'true', translate:'Alert 1'}};
+      alert[1]={message:{severity:'warning',overlay:'false', dismissable:'true', translate:'Alert 2'}};
+      alert[2]={message:{severity:'info',overlay:'false', dismissable:'true', translate:'Alert 3'}};
+      alert[3]={message:{severity:'danger',overlay:'true', dismissable:'true', dismissableOnTimeout:'5000', translate:'Alert 4'}};
+      alert[4]={message:{severity:'warning',overlay:'true', dismissable:'true', dismissableOnTimeout:'5000', translate:'Alert 5'}};
+
+      $scope.addAlert=function(){
+          AlertsService.add(alert[alertI]);
+          alertI++;
+          if (alertI===5){
+              alertI=0;
+          }
+      };
+
+      var contextAlertI=0;
+      var contextAlert=[];
+      contextAlert[0]={context:'alert',message:{severity:'danger',overlay:'false', dismissable:'true', translate:'Alert 1'}};
+      contextAlert[1]={context:'alert',message:{severity:'warning',overlay:'false', dismissable:'true', translate:'Alert 2'}};
+      contextAlert[2]={context:'alert',message:{severity:'info',overlay:'false', dismissable:'true', translate:'Alert 3'}};
+      $scope.addContextAlert=function(){
+          AlertsService.add(contextAlert[contextAlertI]);
+          contextAlertI++;
+          if (contextAlertI===3){
+              contextAlertI=0;
+          }
+      };
+
       $scope.testSelect=[];
       $scope.testMultipleSelect=[];
       $scope.selected=[];

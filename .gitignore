@@ -1,9 +1,7 @@
-.grunt/**/*
 .idea/**/*
 *.iml
-components/**/*
 **/fonts/frutiger/**/*
-src/lib/**/*
+lib/**/*
 node_modules/**/*
 
 

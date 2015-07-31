@@ -104,6 +104,7 @@
                     files: {
                         'src/scripts/lib/lib.min.js': [
                             'lib/jquery/dist/jquery.js',
+                            'lib/detect-mobile-browser/detectmobilebrowser.js',
                             'lib/bootstrap/dist/js/bootstrap.js',
                             'lib/bootstrap-tour/build/js/bootstrap-tour.js',
                             'lib/angular/angular.js',
@@ -180,7 +181,7 @@
         grunt.registerTask('dev', ['prepare','browserSync','watch']);
 
         // Default task.
-        grunt.registerTask('default', ['prepare','copy:dist']);
+        grunt.registerTask('default', ['prepare','copy:example']);
     };
 
 
